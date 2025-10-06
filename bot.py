@@ -7,12 +7,12 @@ import signal
 import sys
 
 # ---------------- CONFIG ---------------- #
-TELEGRAM_TOKEN = 'YOUR_BOT_TOKEN'
-CHAT_ID = 'YOUR_CHAT_ID'
-TIMEFRAME = '1h'
-PERIOD = 10
-MULTIPLIER = 2
-CHECK_INTERVAL = 60  # seconds
+TELEGRAM_TOKEN = '8388160667:AAEDpYqtOVyjywdY4RVMmbPR3aVB6NKWmQo'
+CHAT_ID = '704102822'
+TIMEFRAME = '15m'
+PERIOD = 12
+MULTIPLIER = 3
+CHECK_INTERVAL = 400  # seconds
 # ---------------------------------------- #
 
 # Initialize Binance API
@@ -92,7 +92,7 @@ def monitor_trends():
             print(f"Error processing {pair}: {e}")
 
 # Send initial startup message
-send_telegram("🚀 Supertrend Alert Bot Started! Monitoring all USDT pairs...")
+send_telegram("🚀 Supertrend Alert Bot Started! Monitoring all USDT pairs...","TIMEFRAME:",TIMEFRAME,"PERIOD:",PERIOD,"MULTIPLIER:",MULTIPLIER)
 
 # Schedule monitoring
 schedule.every(CHECK_INTERVAL).seconds.do(monitor_trends)
