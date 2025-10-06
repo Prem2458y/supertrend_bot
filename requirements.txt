@@ -1,4 +1,5 @@
-ccxt
-pandas
-requests
-schedule
+ccxt==3.0.53
+pandas==2.2.0
+requests==2.31.0
+schedule==1.2.0
+websockets==11.0.3
